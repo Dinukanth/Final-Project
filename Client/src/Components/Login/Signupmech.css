@@ -1,0 +1,102 @@
+.container-login-mech{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 630px;
+    height: 900px;
+    background: #f4f3f3;
+    padding-bottom: 30px;
+    box-shadow: #14274e;
+    margin-top: 10px;
+    box-shadow: .3px .3px 5px;
+
+
+}
+
+.header-login-mech{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text-login-mech{
+    color: #14274e;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline_login-mech{
+    width: 61px;
+    height: 6px;
+    background: #14274e;
+    border-radius: 9px;
+
+
+}
+.inputs-login-mech{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-login-mech{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+
+.input-login-mech input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+    margin: 0px 30px;
+
+
+}
+
+.forget_forget-mech{
+    padding-left: 62px;
+    margin-top: 27px;
+    color: silver;
+    font-size: 18px;
+}
+
+.forget_forget-mech span{
+    color: #4c00b4;
+    cursor: pointer;
+}
+
+.submit-cointainer_mech{
+    display: flex;
+    gap: 30px;
+    /* margin-top: 60px auto; */
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.submit_log-mech{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: silver;
+    background: #14274e;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}

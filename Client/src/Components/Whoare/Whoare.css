@@ -1,0 +1,56 @@
+.signup__mech .img-mech .image--img{
+    height: 450px;
+    width: auto;
+    margin-left: 300px;
+    margin-top: 190px;
+    object-fit: cover;
+    box-shadow: black;
+    opacity: 0.9;
+    border: black;
+
+    
+}
+
+.link-mech-login{
+    margin-left: 500px;
+    
+}
+.link-mech-login .mech-mech_login{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(9, 5, 113);
+}
+
+
+
+
+
+.img-user .image--img-user{
+    height: 450px;
+    width: auto;
+    margin-left: 1100px;
+    /* margin-top: -800px; */
+    object-fit: cover;
+    box-shadow: black;
+    opacity: 0.9;
+    border: black;
+
+    
+}
+.image--img-user{
+    margin-top: -540px;
+}
+
+.link-user-login{
+    margin-left: 1350px;
+    
+}
+.link-user-login .user-user_login{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(9, 5, 113);
+}
+#imguser{
+    /* background-color: aqua; */
+    margin-top: -50px;
+}

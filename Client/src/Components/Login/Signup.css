@@ -1,0 +1,100 @@
+.container-login-login{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+    background: #f4f3f3;
+    padding-bottom: 30px;
+    /* box-shadow: #14274e; */
+    box-shadow: .3px .3px 5px;
+
+
+}
+
+.header-login_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text-login_login{
+    color: #14274e;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline_login-login{
+    width: 61px;
+    height: 6px;
+    background: #14274e;
+    border-radius: 9px;
+
+
+}
+.inputs-login_login{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-login_login{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+
+.input-login_login input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+    margin: 0px 30px;
+
+
+}
+
+.forget_forget-home{
+    padding-left: 62px;
+    margin-top: 27px;
+    color: #797979;
+    font-size: 18px;
+}
+
+.forget_forget-home span{
+    color: #14274e;
+    cursor: pointer;
+}
+
+.submit-cointainer{
+    display: flex;
+    gap: 30px;
+    /* margin-top: 60px auto; */
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.submit_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #14274e;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}

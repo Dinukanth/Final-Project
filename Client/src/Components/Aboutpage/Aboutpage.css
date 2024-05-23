@@ -1,0 +1,50 @@
+/* @font-face {
+    font-family: 'MyFont';
+    src: url('new/path/to/fonts/myfont.woff') format('woff');
+} */
+
+body {
+    font-family: 'MyFont', sans-serif;
+}
+
+
+.background-about img{
+    width: 220.7vh;
+    height: 100vh;
+   
+}
+
+.background-about {
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    font-size: 15px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(8, 3, 3);
+    background-color: rgba(247, 246, 246, 0.5); /* Optional: adds a semi-transparent black background behind the text */
+    padding: 20px;
+    margin-top: -50px;
+}
+/* .background-about .back-back_img_9 img{
+
+  
+   
+} */
+
+.back-back_img_9 img{
+    width: 600px;
+    height: auto;
+    margin-top: -50vh;
+    opacity: 0.7;
+
+    
+}
+.about-img-image{
+    opacity: 0.8;
+}

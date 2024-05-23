@@ -1,0 +1,205 @@
+/* body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #1e1e1e;
+    font-family: 'Oswald', sans-serif;
+  } */
+  
+  a, li, em, button, input, textarea, select {
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+    outline: none !important;
+    transition: 0.5s;
+    resize: none;
+  }
+
+
+  .mech-mech-detail{
+    margin-left:0px;
+  }
+  
+  ul {
+    position: relative;
+    left: -20px;
+  }
+  
+  ul li {
+    padding: 20px 0;
+    color: gray;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  b {
+    color: #fff;
+  }
+  
+  .btn-u-mech {
+    background: #2c15e0;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    color: #000;
+    display: block;
+    width: 100px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fa {
+    color: #05198e;
+    cursor: pointer;
+  }
+  
+  .mechanic-container {
+    width: 90%;
+    margin: 10vh auto;
+  }
+  
+  .mechanic-container table {
+    width: 100%;
+  }
+  
+  .mechanic-container table td {
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
+    padding: 30px;
+    background-color: #000;
+    color: #fff;
+    vertical-align: top;
+  }
+  
+  .mechanic-container table td:nth-child(1) {
+    text-align: center;
+  }
+  
+  .mechanic-container table td:nth-child(2) .fa {
+    float: right;
+  }
+  
+  .mechanic-container table td:nth-child(2) input {
+    background: none;
+    outline: none;
+    border: 0;
+    color: gray;
+    width: 60%;
+    pointer-events: none;
+  }
+  
+  .mechanic-container table td:nth-child(1) section {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 5vh auto;
+  }
+  
+  .mechanic-container table td:nth-child(1) .fa {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 2em;
+  }
+  
+  .mechanic-container table td img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .mechanic-container table td h3 {
+    color: gray;
+    font-weight: normal;
+  }
+  
+  .mechanic-container table .section2 {
+    text-align: left;
+  }
+  
+  .mechanic-container table .section2 label {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .mechanic-container table .section2 select,
+  .mechanic-container table .section2 input,
+  .mechanic-container table textarea {
+    background: #1e1e1e;
+    width: 100%;
+    padding: 19px;
+    border: 0;
+    outline: none;
+    color: gray;
+  }
+  
+  .mechanic-container table .section2 .quantityselector {
+    height: 80px;
+    border-bottom: 0px;
+  }
+  
+  .mechanic-container table .section2 .quantityselector section {
+    display: inline-block !important;
+  }
+
+  .mech-mech-page{
+    margin-left: 0px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

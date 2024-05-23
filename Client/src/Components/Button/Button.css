@@ -1,0 +1,55 @@
+
+body { 
+    padding: 0; 
+    margin: 0; 
+    /* background-color: black; */
+} 
+
+a { 
+    position: absolute; 
+    top: 89%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 110px; 
+    height: 40px; 
+    color: rgb(224, 211, 211); 
+    text-decoration: none; 
+    text-align: center; 
+    /* padding-top: 30px;  */
+    /* font-size: 20px;  */
+    overflow: hidden; 
+    background:rgb(34, 93, 93); 
+} 
+
+a::before { 
+    content: ""; 
+    position: absolute; 
+    /* width: 0;  */
+    /* height: 0;  */
+    left: 0; 
+    bottom: 0; 
+    border-style: solid; 
+    border-color: rgb(198, 74, 74); 
+    border-width: 80px 100px; 
+    z-index: -1; 
+    transform: rotate(360deg); 
+    transition: 1s; 
+    transform-origin: left; 
+} 
+
+a:hover::before { 
+    border-color:rgb(10, 10, 37); 
+    transform: rotate(70deg); 
+}   
+.btn--download{
+    padding: 16px 32px;
+    font-size: 25px;
+     position: fixed; 
+     bottom: 27px;
+    left: calc(50% -96px);
+    z-index: 100;
+    box-shadow: 0 6px 23px rgba(70, 228, 17, 0.45);
+    animation: fade-up 0.5s 0.4s backwards;
+    border-radius: 0%;
+    } 
+

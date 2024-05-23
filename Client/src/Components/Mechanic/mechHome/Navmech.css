@@ -1,0 +1,124 @@
+.navbar-mech {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #14274e;
+    color: silver;
+    height: 70px;
+    
+    
+  }
+  
+  .align-mech {
+    align-self: center;
+  }
+  
+  
+  
+  .home-nav-home-mech{
+    margin-left: 1200px;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-about-mech{
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+  }
+  .nav-contact-mech{
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  
+   .navbar-mech a {
+      font-size: 22PX;
+      color: #f9fafa;
+      text-decoration: none;
+      font-weight: 500;
+      padding-left: 50px;
+      /* margin-left:00px; */
+      transition: .3s;
+      font-family: "Noto Sans JP", sans-serif;
+   }
+    
+    
+    
+    .navbar-mech a:hover,
+    .navbar-mech a.active {
+      color: #fff;
+    
+    }
+  
+    /* Existing CSS for desktop view remains unchanged */
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-mech {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #14274e;
+    color: silver;
+    height: 70px;
+
+
+}
+
+.align-mech {
+    align-self: center;
+}
+
+.home-nav-mech {
+    margin-left: 1200px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-about-mech {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-contact-mech {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.navbar-mech a {
+    font-size: 22PX;
+    color: #f9fafa;
+    text-decoration: none;
+    font-weight: 500;
+    /* margin-left: 50px;/ */
+    transition: .3s;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+
+
+.navbar-mech a:hover,
+.navbar-mech a.active {
+    color: #fff;
+
+}
