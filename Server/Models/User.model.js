@@ -1,13 +1,9 @@
 const Mongoose =require("mongoose");
 const UserSchema = new Mongoose.Schema({
-    // userID: {
-    //     type: String,
-    //     // require: true,
-    //     // unique:true
-    // },
+   
     Name:{
         type: String,
-        // require:true
+        require:true
     },
     Email:{
         type: String,
@@ -17,12 +13,12 @@ const UserSchema = new Mongoose.Schema({
     },
     Password:{
         type: String,
-        // require:true
+        require:true
     },
     role: {
         type: String,
-        enum: ["user", "mechanic", "admin"], // Possible roles
-        default: "user" // Default role is "user"
+        enum: ["user", "mechanic", "admin"],
+        default: "user" 
     }
 
 })

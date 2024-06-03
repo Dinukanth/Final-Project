@@ -1,12 +1,36 @@
 const express = require('express');
-const { createUserForm, getUserForms } = require('../Controllers/userFormController');
+const { createUserForm, getUserForms, findNearbyMechanics,  } = require('../Controllers/userFormController');
 
 const router = express.Router();
 
-// Define the route for creating a user form
 router.post('/createform', createUserForm);
-router.get('/getform', getUserForms);
+router.get('/getforms', getUserForms);
+router.post('/findnearbymechanics', findNearbyMechanics); 
+
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const express = require('express');
+// const { createUserForm, getUserForms } = require('../Controllers/userFormController');
+
+// const router = express.Router();
+
+// // Define the route for creating a user form
+// router.post('/createform', createUserForm);
+// router.get('/getform', getUserForms);
+// module.exports = router;
 
 
 

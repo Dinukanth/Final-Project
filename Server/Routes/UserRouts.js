@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const  {createUser, updateUser, deleteUser, getUser}=  require('../Controllers/UserController');
+const  {createUser, updateUser, deleteUser, getUser, getUserById}=  require('../Controllers/UserController');
 
 // const {loginUser, signupUser } = require('../Controllers/authentication')
 // const { hashGenerate } = require('../Helpers/hashing');
 // Routes using controller functions
 router.get('/get',getUser);
+router.get('/get/:id', getUserById)
 router.post('/create',createUser);
 router.put('/update/:id',updateUser);
 router.delete('/delete/:id',deleteUser);

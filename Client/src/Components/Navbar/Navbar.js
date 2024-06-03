@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css'
-import GGG from '../Navbar/image/GGG.png'
+import ggg from '../Navbar/image/ggg.png'
 import { HashLink as Link } from "react-router-hash-link";
 
 
@@ -10,7 +10,7 @@ function Navbar () {
         <div>
     <nav className="navbar">
         <div className="logo-logo">
-            <img src={GGG} alt="" className="logo-nav"/>
+            <img src={ggg} alt="" className="logo-nav"/>
         </div>
         <div className='align'>
             <Link to="/" className="home-nav-home">Home</Link>

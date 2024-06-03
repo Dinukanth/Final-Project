@@ -4,7 +4,7 @@
   padding: 10px;
   background-color: #fff;
   color: #14274e;
-  height: 70px;
+  height: 90px;
   box-shadow: 2px 2px 7px #14274e;
   /* position: fixed; */
   /* margin-top: 500px; */
@@ -25,9 +25,9 @@
 }
 
 .logo-nav{
-  height: 60px;
-  width: auto;
-  margin-top: -10px;
+  height: 190px;
+  width: 250px;
+  margin-top: -60px;
   margin-left: 70px;
 }
 

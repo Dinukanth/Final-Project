@@ -4,6 +4,7 @@ import '../Admin/Admin.css'
 // BiSolidReport,
 import Navbar from '../Navbar/Navbar'
 import { HashLink as Link } from "react-router-hash-link";
+import Overview from './Overview';
 
 
 export const Admin = () => {
@@ -21,10 +22,10 @@ export const Admin = () => {
 
         
         <div className='menu--list'>
-            <a href='#' className='item-admin'>
+            <Link to='/overview' className='item-admin'>
             <BiHome className='admin-icon'/>
-                Dashboard
-            </a>
+                Dashboard   
+            </Link>
             <Link to='/mechAdmin' className='item-admin'>
                 <BiTask className='admin-icon'/>
                 Mechanic
@@ -33,10 +34,12 @@ export const Admin = () => {
                 <BiUser className='admin-icon'/>
                 User
             </Link>
-            {/* <a href='#' className='item-admin'>
+
+             {/* <a href='#' className='item-admin'>
                 <BiStats className='admin-icon'/>
-                Stats
-            </a>
+                User
+            </a> */}
+            {/*
             <a href='#' className='item-admin'>
                 <BiMessage className='admin-icon'/>
                 Message
@@ -47,6 +50,7 @@ export const Admin = () => {
             </a> */}
         </div>
     </div>
+    <Overview/>
 
     </>
   )

@@ -9,6 +9,7 @@ export default function Navmech() {
     <div>
 
 <nav className="navbar-mech">
+  
                 <div className='align-mech'>
                     <Link to="/Mechpage" className="home-nav-home-mech">Home</Link>
                     <Link to="/order" className="nav-about-mech" >Orderdetails</Link>

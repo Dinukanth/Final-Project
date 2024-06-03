@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './userAdmin.css';
+import { Admin } from './Admin';
 
 const UserAdmin = () => {
     const [users, setUsers] = useState([]);
     const [error, setError] = useState('');
+    const [selectedUser, setSelectedUser] = useState(null);
+    const [actionType, setActionType] = useState('');
+    const [formData, setFormData] = useState({
+        Name: '',
+        Email: ''
+    });
 
     useEffect(() => {
         axios.get('http://localhost:3004/user/get')
@@ -15,52 +22,132 @@ const UserAdmin = () => {
             });
     }, []);
 
-    const handleEdit = (id) => {
-        // Handle edit action
+    const handleEdit = (user) => {
+        setSelectedUser(user._id);
+        setActionType('edit');
+        setFormData({ Name: user.Name, Email: user.Email });
     };
 
-    const handleDelete = async (id) => {
-        try {
-            const response = await fetch(`http://localhost:3004/user/delete/${id}`, {
-                method: 'DELETE',
-            });
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+    const handleDelete = (id) => {
+        setSelectedUser(id);
+        setActionType('delete');
+    };
+
+    const confirmAction = async () => {
+        if (actionType === 'delete') {
+            try {
+                const response = await fetch(`http://localhost:3004/user/delete/${selectedUser}`, {
+                    method: 'DELETE',
+                });
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                setUsers(users.filter(user => user._id !== selectedUser));
+            } catch (error) {
+                console.error("Failed to delete user:", error);
+                setError('Failed to delete user.');
             }
-            // setUsers(users.filter(user => user._id !== id));
-        } catch (error) {
-            console.error("Failed to delete user:", error);
-            setError('Failed to delete user.');
+        } else if (actionType === 'edit') {
+            try {
+                const response = await fetch(`http://localhost:3004/user/update/${selectedUser}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const updatedUser = await response.json();
+                setUsers(users.map(user => user._id === selectedUser ? updatedUser : user));
+            } catch (error) {
+                console.error("Failed to update user:", error);
+                setError('Failed to update user.');
+            }
         }
+        setSelectedUser(null);
+        setActionType('');
+    };
+
+    const closeModal = () => {
+        setSelectedUser(null);
+        setActionType('');
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
     };
 
     return (
         <div>
-            {error && <div className="error-message">{error}</div>}
-            <table>
-                <thead>
-                    <tr>
-                        <th>User Name</th>
-                        <th>Email</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {users.map(user => (
-                        <tr key={user._id}>
-                            <td>{user.Name}</td>
-                            <td>{user.Email}</td>
-                            <td>
-                                <button onClick={() => handleEdit(user._id)}>Edit</button>
-                            </td>
-                            <td>
-                                <button onClick={() => handleDelete(user._id)}>Delete</button>
-                            </td>
+            <Admin />
+            <div className='dinu-user'>
+                {error && <div className="error-message">{error}</div>}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Email</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {users.map(user => (
+                            <tr key={user._id}>
+                                <td>{user.Name}</td>
+                                <td>{user.Email}</td>
+                                <td>
+                                    <button onClick={() => handleEdit(user)}>Edit</button>
+                                </td>
+                                <td>
+                                    <button onClick={() => handleDelete(user._id)}>Delete</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                {selectedUser && (
+                    <div className="modal">
+                        <div className="modal-content">
+                            <span className="close" onClick={closeModal}>&times;</span>
+                            {actionType === 'delete' ? (
+                                <div>
+                                    <p>Are you sure you want to delete this user?</p>
+                                    <div className="modal-actions">
+                                        <button onClick={confirmAction}>Yes</button>
+                                        <button onClick={closeModal}>No</button>
+                                    </div>
+                                </div>
+                            ) : (
+                                <div>
+                                    <h3>Edit User</h3>
+                                    <label>Name:</label>
+                                    <input
+                                        type="text"
+                                        name="Name"
+                                        value={formData.Name}
+                                        onChange={handleChange}
+                                    />
+                                    <label>Email:</label>
+                                    <input
+                                        type="email"
+                                        name="Email"
+                                        value={formData.Email}
+                                        onChange={handleChange}
+                                    />
+                                    <div className="modal-actions">
+                                        <button onClick={confirmAction}>Save</button>
+                                        <button onClick={closeModal}>Cancel</button>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
@@ -74,95 +161,3 @@ export default UserAdmin;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// // import '../Admin/mechadmin.css'
-// import '../Admin/userAdmin.css'
-
-// const UserAdmin = () => {
-//     const [users, setUsers] = useState([
-//         { id: 1, name: 'Kirusi', type: 'Car Mechanic', location: 'Mulliyawalai', email: 'kirusi@example.com' },
-//         { id: 2, name: 'Lachchu', type: 'Bike Mechanic', location: 'Thanneritru', email: 'lachchu@example.com' },
-//         { id: 3, name: 'Joy', type: 'Bike Mechanic', location: 'Vattappalai', email: 'joy@example.com' },
-//         { id: 4, name: 'Thuva', type: 'Car Mechanic', location: 'Mulliyawalai', email: 'thuva@example.com' },
-//         { id: 5, name: 'Vimal', type: 'Car Mechanic', location: 'Mullaithivu', email: 'vimal@example.com' },
-//         { id: 6, name: 'Jathu', type: 'Bike Mechanic', location: 'Oddosuddan', email: 'jathu@example.com' },
-//         { id: 7, name: 'Dinu', type: 'Car Mechanic', location: 'Alambil', email: 'dinu@example.com' },
-
-
-
-//         // Add more users here
-//     ]);
-
-//     const handleEdit = (id) => {
-//         // Handle edit action
-//     };
-
-//     // const handleDelete = (id) => {
-//     //     // Handle delete action
-//     //     setUsers(users.filter(user => user.id !== id));
-//     // };
-
-//     return (
-//         <table>
-//             <thead>
-//                 <tr>
-//                     <th>User Name</th>
-//                     <th>What type mechanic</th>
-//                     <th>Location</th>
-//                     <th>Email</th>
-//                     <th>Edit</th>
-//                     <th>Delete</th>
-//                 </tr>
-//             </thead>
-//             <tbody>
-//                 {users.map(user => (
-//                     <tr key={user.id}>
-//                         <td>{user.name}</td>
-//                         <td>{user.type}</td>
-//                         <td>{user.location}</td>
-//                         <td>{user.email}</td>
-//                         <td>
-//                             <button >Edit</button>
-
-// {/* onClick={() => handleEdit(user.id)} */}
-// {/* onClick={() => handleDelete(user.id)} */}
-
-//                         </td>
-//                         <td>
-//                             <button >Delete</button>
-//                         </td>
-//                     </tr>
-//                 ))}
-//             </tbody>
-//         </table>
-//     );
-// };
-
-// export default UserAdmin;

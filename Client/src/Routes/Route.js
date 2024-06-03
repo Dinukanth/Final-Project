@@ -17,6 +17,7 @@ import UserAdmin from "../Components/Admin/userAdmin";
 import Dashboard from "../Components/Admin/Layot";
 import MechanicDashboard from "../Components/Mechanic/mechHome/mechOrder";
 import MechanicPage from "../Components/Mechanic/mechHome/mechOrder";
+import Overview from '../Components/Admin/Overview';
 // import MechanicOrderMessage from "../Components/Mechanic/mechHome/mechOrder";
 
 // import CreditCardForm from "../Components/Mechanic/mechHome/mechPayment";
@@ -45,6 +46,8 @@ export default function RouteTable() {
                 <Route path="/Mechpage" element={<MechanicUserPage/>}/>
                 <Route path="mechAdmin" element={<Mechadmin/>}/>
                 <Route path="userAdmin" element={<UserAdmin/>}/>
+                <Route path='/overview' element={<Overview/>}/>
+            
 
                 <Route path="/order" element={<MechanicDashboard/>}/>
                 <Route path="/mechanicPage" element={<MechanicPage />} />

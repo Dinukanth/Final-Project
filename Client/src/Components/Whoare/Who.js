@@ -1,11 +1,4 @@
-// import React from "react";
-// import '../Whoare.Who.css'
 
-// function Who() {
-    
-// }
-
-// Assuming you're using React
 import React from 'react';
 import '../Whoare/Who.css'
 import img11 from '../Whoare/Image/img11.jpg'
@@ -17,10 +10,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 
 const Who = () => {
-    // const handleLearnMoreClick = () => {
-    //     window.location.href = 'https://example.com/learn-more';
-    // };
-
+   
     return (
 
         <>

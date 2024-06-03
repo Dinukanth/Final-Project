@@ -19,7 +19,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "leaflet": "^1.9.4",
-    "mapbox-gl": "^3.3.0",
+    "mapbox-gl": "^3.4.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
     "nodemon": "^3.1.0",

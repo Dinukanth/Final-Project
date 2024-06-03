@@ -85,7 +85,8 @@
     gap: 30px;
     /* margin-top: 60px auto; */
     margin-left: 50px;
-    margin-top: 40px;
+    margin-top: 30px;
+
 }
 .submit_log-mech{
     display: flex;
@@ -97,6 +98,25 @@
     background: #14274e;
     border-radius: 50px;
     font-size: 19px;
+    margin-left: 50px;
+    
+    
     font-weight: 700;
     cursor: pointer;
+}
+.submit_log-mech-log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: silver;
+    margin-left: 350px;
+    background: #14274e;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: -60px;
+    cursor: pointer;
+
 }
