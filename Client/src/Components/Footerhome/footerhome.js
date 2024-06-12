@@ -38,7 +38,7 @@ const Footerhome = () => {
       </div>
       <div className="flex">
         <section className="flex-content padding_1x">
-          <p>Copyright ©2024 All rights reserved || Mechanic finder</p>
+          <p>Copyright ©2024 All rights reserved || Gear Grease</p>
         </section>
         {/* <section className="flex-content padding_1x">
           <a href="#"><i className="fa fa-facebook"></i></a>

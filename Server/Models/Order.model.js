@@ -1,27 +1,51 @@
-const Mongoose =require("mongoose");
-const orderSchema = new Mongoose.Schema({
-    orderID: {
-        type: String,
-        require: true,
+const mongoose = require('mongoose');
 
+const MechOrderSchema = new mongoose.Schema({
+    mechanicId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Mechanic',
     },
-    userID: {
-        type: String,
-        require: true,
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
     },
-    mechanicID:{
-        type: String,
-        require:true
+    serviceDetails: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'UserForm'
     },
-    Email:{
-        type: String,
-        require:true
+    userLatitude: {
+        type: Number,
+        required: true
     },
-    Password:{
+    userLongitude: {
+        type: Number,
+        required: true
+    },
+    status: {
         type: String,
-        require:true
+        enum: ['Pending', 'In Progress', 'Completed'],
+        default: 'Pending'
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
+});
+
+MechOrderSchema.pre(/^find/, function(next){
+    this.populate({
+        path: "mechanicId",
+        select: "Name"
+    })
+    this.populate({
+        path: "userId",
+        select: "Name"
+    })
+    this.populate({
+        path: "serviceDetails",
+        select: "VehicleIssue"
+    })
+    next()
 })
 
-const Ordermodel = Mongoose.model('Order', orderSchema)
-module.exports = Ordermodel
+module.exports = mongoose.model('MechOrder', MechOrderSchema);

@@ -18,7 +18,7 @@ import Footerhome from '../Footerhome/footerhome';
 function Contact() {
     return (
         <>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='con-con-contact'>
 
         <section className="contact" id='contact-contact-home'>

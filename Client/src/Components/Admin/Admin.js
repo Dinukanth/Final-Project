@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiHome, BiMessage, BiStats, BiTask, BiHelpCircle, BiSolidCarMechanic, BiUser, } from 'react-icons/bi'
+import { BiHome, BiMessage, BiStats, BiTask, BiHelpCircle, BiSolidCarMechanic, BiUser, BiSolidCarGarage, BiSolidReceipt} from 'react-icons/bi'
 import '../Admin/Admin.css'
 // BiSolidReport,
 import Navbar from '../Navbar/Navbar'
@@ -27,7 +27,7 @@ export const Admin = () => {
                 Dashboard   
             </Link>
             <Link to='/mechAdmin' className='item-admin'>
-                <BiTask className='admin-icon'/>
+                <BiSolidCarGarage className='admin-icon'/>
                 Mechanic
             </Link>
             <Link to='/userAdmin' className='item-admin'>
@@ -35,10 +35,10 @@ export const Admin = () => {
                 User
             </Link>
 
-             {/* <a href='#' className='item-admin'>
+             <a href='/orderadmin' className='item-admin'>
                 <BiStats className='admin-icon'/>
-                User
-            </a> */}
+                Order
+            </a>
             {/*
             <a href='#' className='item-admin'>
                 <BiMessage className='admin-icon'/>
@@ -50,7 +50,7 @@ export const Admin = () => {
             </a> */}
         </div>
     </div>
-    <Overview/>
+    {/* <Overview/> */}
 
     </>
   )

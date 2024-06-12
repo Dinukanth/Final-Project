@@ -87,6 +87,8 @@ import backgroundImage from './hand-car-mechanic-with-wrench-auto-repair-garage.
 import { HashLink as Link } from "react-router-hash-link";
 import Footerhome from '../Footerhome/footerhome';
 import Navbar from '../Navbar/Navbar';
+import Aboutpage from '../Aboutpage/Aboutpage';
+import Contact from '../Contact/Contact';
 
 function LandingPage() {
     return (
@@ -108,6 +110,10 @@ function LandingPage() {
             </div>
 
         </div>
+        <Aboutpage/>
+        <Contact/>
+        <Footerhome/>
+        
 
         </>
     );

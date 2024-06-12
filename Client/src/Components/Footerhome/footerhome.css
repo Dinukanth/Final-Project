@@ -1,10 +1,10 @@
 :root{
     --white:#FFF;
-    --black:#000;
-    --dark:#1f1f1f;
+    --black:#032366;
+    --dark:#131475;
     --gray:rgba(1,1,1,0.6);
     --lite:rgba(255,255,255,0.6);
-    --primary:#01060b;
+    --primary:#093e72;
     --secondary:#c6d6ec;
 }
 
@@ -12,11 +12,6 @@
 /***************************
             DEFAULT
 ****************************/
- body{
-    margin:0;
-    overflow-x:hidden !important;
-    font-family: 'Poppins', sans-serif;
-}
 
 a{
     text-decoration:none !important;
@@ -227,4 +222,20 @@ footer .flex:last-child a:hover{
         flex:1 1 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

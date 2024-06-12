@@ -36,8 +36,11 @@ const Overview = () => {
     return (
 
 
+
         <>
         <Admin/>
+        <div className='dinu'>
+
         <div className="overview">
             {error && <div className="error-message">{error}</div>}
             <div className="overview-item">
@@ -53,6 +56,8 @@ const Overview = () => {
                 <p>{userCount + mechanicCount}</p>
             </div>
         </div>
+        </div>
+
         </>
     );
 };
