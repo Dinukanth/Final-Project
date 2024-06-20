@@ -6,7 +6,7 @@ const OrderStatus = ({ orderId, currentStatus }) => {
 
     const handleStatusChange = async (newStatus) => {
         try {
-            const response = await axios.put('http://localhost:3004/order/status', {
+            const response = await axios.put('https://final-project-2vgx.onrender.com/order/status', {
                 orderId,
                 status: newStatus
             });

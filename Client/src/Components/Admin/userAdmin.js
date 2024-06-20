@@ -14,7 +14,7 @@ const UserAdmin = () => {
     });
 
     useEffect(() => {
-        axios.get('http://localhost:3004/user/get')
+        axios.get('https://final-project-2vgx.onrender.com/user/get')
             .then(response => setUsers(response.data))
             .catch(error => {
                 console.error('Error fetching users:', error);
@@ -36,7 +36,7 @@ const UserAdmin = () => {
     const confirmAction = async () => {
         if (actionType === 'delete') {
             try {
-                const response = await fetch(`http://localhost:3004/user/delete/${selectedUser}`, {
+                const response = await fetch(`https://final-project-2vgx.onrender.com/user/delete/${selectedUser}`, {
                     method: 'DELETE',
                 });
                 if (!response.ok) {
@@ -49,7 +49,7 @@ const UserAdmin = () => {
             }
         } else if (actionType === 'edit') {
             try {
-                const response = await fetch(`http://localhost:3004/user/update/${selectedUser}`, {
+                const response = await fetch(`https://final-project-2vgx.onrender.com/user/update/${selectedUser}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

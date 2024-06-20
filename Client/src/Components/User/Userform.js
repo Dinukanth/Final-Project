@@ -29,7 +29,7 @@ export default function UserForm() {
 
     const handleSubmit = async (userData) => {
         try {
-            const response = await fetch("http://localhost:3004/form/createform", {
+            const response = await fetch("https://final-project-2vgx.onrender.com/form/createform", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -130,7 +130,7 @@ export default function UserForm() {
 
 //     const handleSubmit = async (userData) => {
 //         try {
-//             const response = await fetch("http://localhost:3004/form/createform", {
+//             const response = await fetch("https://final-project-2vgx.onrender.com/form/createform", {
 //                 method: "POST",
 //                 headers: {
 //                     "Content-Type": "application/json"

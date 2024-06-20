@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import '../User/Nearbymechanic.css';
 import MechanicMap from '../User/Mechanicmap';
 
-const socket = io('http://localhost:3004'); // Adjust the URL as needed
+const socket = io('https://final-project-2vgx.onrender.com'); // Adjust the URL as needed
 
 const NearbyMechanics = ({ latitude, longitude }) => {
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ const NearbyMechanics = ({ latitude, longitude }) => {
     useEffect(() => {
         const fetchNearbyMechanics = async () => {
             try {
-                const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+                const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
                     latitude,
                     longitude
                 });
@@ -39,7 +39,7 @@ const NearbyMechanics = ({ latitude, longitude }) => {
 
     const handleHire = async (mechanic) => {
         try {
-            const response = await axios.post('http://localhost:3004/mech/hire', {
+            const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
                 mechanicId: mechanic._id,
                 userLatitude: latitude,
                 userLongitude: longitude
@@ -146,7 +146,7 @@ export default NearbyMechanics;
 // import '../User/Nearbymechanic.css';
 // import MechanicMap from '../User/Mechanicmap';
 
-// const socket = io('http://localhost:3004'); // Adjust the URL as needed
+// const socket = io('https://final-project-2vgx.onrender.com'); // Adjust the URL as needed
 
 // const NearbyMechanics = ({ latitude, longitude }) => {
 //     const navigate = useNavigate();
@@ -160,7 +160,7 @@ export default NearbyMechanics;
 //     useEffect(() => {
 //         const fetchNearbyMechanics = async () => {
 //             try {
-//                 const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//                 const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //                     latitude,
 //                     longitude
 //                 });
@@ -179,7 +179,7 @@ export default NearbyMechanics;
 
 //     const handleHire = async (mechanic) => {
 //         try {
-//             const response = await axios.post('http://localhost:3004/mech/hire', {
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //                 mechanicId: mechanic._id,
 //                 userLatitude: latitude,
 //                 userLongitude: longitude
@@ -263,7 +263,7 @@ export default NearbyMechanics;
 // import '../User/Nearbymechanic.css';
 // import MechanicMap from '../User/Mechanicmap';
 
-// const socket = io('http://localhost:3004'); // Adjust the URL as needed
+// const socket = io('https://final-project-2vgx.onrender.com'); // Adjust the URL as needed
 
 // const NearbyMechanics = ({ latitude, longitude }) => {
 //   const navigate = useNavigate();
@@ -277,7 +277,7 @@ export default NearbyMechanics;
 //   useEffect(() => {
 //     const fetchNearbyMechanics = async () => {
 //       try {
-//         const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//         const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //           latitude,
 //           longitude
 //         });
@@ -296,7 +296,7 @@ export default NearbyMechanics;
 
 //   const handleHire = async (mechanic) => {
 //     try {
-//       const response = await axios.post('http://localhost:3004/mech/hire', {
+//       const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //         mechanicId: mechanic._id,
 //         userLatitude: latitude,
 //         userLongitude: longitude
@@ -386,7 +386,7 @@ export default NearbyMechanics;
 // import '../User/Nearbymechanic.css';
 // import MechanicMap from '../User/Mechanicmap';
 
-// const socket = io('http://localhost:3004'); // Adjust the URL as needed
+// const socket = io('https://final-project-2vgx.onrender.com'); // Adjust the URL as needed
 
 // const NearbyMechanics = ({ latitude, longitude }) => {
 //   const navigate = useNavigate(); // Use useNavigate instead of useHistory
@@ -400,7 +400,7 @@ export default NearbyMechanics;
 //   useEffect(() => {
 //     const fetchNearbyMechanics = async () => {
 //       try {
-//         const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//         const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //           latitude,
 //           longitude
 //         });
@@ -419,7 +419,7 @@ export default NearbyMechanics;
 
 //   const handleHire = async (mechanic) => {
 //     try {
-//       const response = await axios.post('http://localhost:3004/mech/hire', {
+//       const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //         mechanicId: mechanic._id,
 //         userLatitude: latitude,
 //         userLongitude: longitude
@@ -506,7 +506,7 @@ export default NearbyMechanics;
 // import '../User/Nearbymechanic.css';
 // import MechanicMap from '../User/Mechanicmap';
 
-// const socket = io('http://localhost:3004'); // Adjust the URL as needed
+// const socket = io('https://final-project-2vgx.onrender.com'); // Adjust the URL as needed
 
 // const NearbyMechanics = ({ latitude, longitude }) => {
 //   const [nearbyMechanics, setNearbyMechanics] = useState([]);
@@ -519,7 +519,7 @@ export default NearbyMechanics;
 //   useEffect(() => {
 //     const fetchNearbyMechanics = async () => {
 //       try {
-//         const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//         const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //           latitude,
 //           longitude
 //         });
@@ -538,7 +538,7 @@ export default NearbyMechanics;
 
 //   const handleHire = async (mechanic) => {
 //     try {
-//       const response = await axios.post('http://localhost:3004/mech/hire', {
+//       const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //         mechanicId: mechanic._id,
 //         userLatitude: latitude,
 //         userLongitude: longitude
@@ -620,7 +620,7 @@ export default NearbyMechanics;
 //   useEffect(() => {
 //     const fetchNearbyMechanics = async () => {
 //       try {
-//         const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//         const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //           latitude,
 //           longitude
 //         });
@@ -639,7 +639,7 @@ export default NearbyMechanics;
 
 //   const handleHire = async (mechanic) => {
 //     try {
-//       const response = await axios.post('http://localhost:3004/mech/hire', {
+//       const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //         mechanicId: mechanic._id,
 //         userLatitude: latitude,
 //         userLongitude: longitude
@@ -665,7 +665,7 @@ export default NearbyMechanics;
 //         try {
 //             const token = localStorage.getItem('token');
 //             await axios.put(
-//               `http://localhost:3004/mech/order/status`,
+//               `https://final-project-2vgx.onrender.com/mech/order/status`,
 //               { orderId, status },
 //               {
 //                 headers: {
@@ -758,7 +758,7 @@ export default NearbyMechanics;
 //     useEffect(() => {
 //         const fetchNearbyMechanics = async () => {
 //             try {
-//                 const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//                 const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //                     latitude,
 //                     longitude
 //                 });
@@ -777,7 +777,7 @@ export default NearbyMechanics;
 
 //     const handleHire = async (mechanic) => {
 //         try {
-//             const response = await axios.post('http://localhost:3004/mech/hire', {
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //                 mechanicId: mechanic._id,
 //                 userLatitude: latitude,
 //                 userLongitude: longitude
@@ -889,7 +889,7 @@ export default NearbyMechanics;
 //     useEffect(() => {
 //         const fetchNearbyMechanics = async () => {
 //             try {
-//                 const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//                 const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //                     latitude,
 //                     longitude
 //                 });
@@ -903,7 +903,7 @@ export default NearbyMechanics;
 
 //         const fetchUserFormDetails = async () => {
 //             try {
-//                 const response = await axios.get('http://localhost:3004/form/getUserFormDetails', {
+//                 const response = await axios.get('https://final-project-2vgx.onrender.com/form/getUserFormDetails', {
 //                     params: { userId: 'USER_ID' } // Replace with actual user ID logic
 //                 });
 //                 setUserFormDetails(response.data);
@@ -920,7 +920,7 @@ export default NearbyMechanics;
 
 //     const handleHire = async (mechanic) => {
 //         try {
-//             const response = await axios.post('http://localhost:3004/mech/hire', {
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //                 mechanicId: mechanic._id,
 //                 userId: userFormDetails.userId,
 //                 serviceDetails: userFormDetails.serviceDetails,
@@ -1041,7 +1041,7 @@ export default NearbyMechanics;
     // useEffect(() => {
         // const fetchNearbyMechanics = async () => {
             // try {
-                // const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+                // const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
                     // latitude,
                     // longitude
                 // });
@@ -1060,7 +1060,7 @@ export default NearbyMechanics;
 // 
     // const handleHire = async (mechanic) => {
         // try {
-            // const response = await axios.post('http://localhost:3004/mech/hire', {
+            // const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
                 // mechanicId: mechanic._id,
                 // userLatitude: latitude,
                 // userLongitude: longitude
@@ -1155,7 +1155,7 @@ export default NearbyMechanics;
 //     useEffect(() => {
 //         const fetchNearbyMechanics = async () => {
 //             try {
-//                 const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//                 const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //                     latitude,
 //                     longitude
 //                 });
@@ -1174,7 +1174,7 @@ export default NearbyMechanics;
 
 //     const handleHire = async (mechanicId) => {
 //         try {
-//             const response = await axios.post('http://localhost:3004/mech/hire', {
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //                 mechanicId,
 //                 userLatitude: latitude,
 //                 userLongitude: longitude
@@ -1265,7 +1265,7 @@ export default NearbyMechanics;
 //     useEffect(() => {
 //         const fetchNearbyMechanics = async () => {
 //             try {
-//                 const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//                 const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //                     latitude,
 //                     longitude
 //                 });
@@ -1284,7 +1284,7 @@ export default NearbyMechanics;
 
 //     const handleHire = async (mechanicId) => {
 //         try {
-//             const response = await axios.post('http://localhost:3004/mech/hire', {
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //                 mechanicId,
 //                 userId,
 //                 userLatitude: latitude,
@@ -1379,7 +1379,7 @@ export default NearbyMechanics;
 //     useEffect(() => {
 //         const fetchNearbyMechanics = async () => {
 //             try {
-//                 const response = await axios.post('http://localhost:3004/form/findnearbymechanics', {
+//                 const response = await axios.post('https://final-project-2vgx.onrender.com/form/findnearbymechanics', {
 //                     latitude,
 //                     longitude
 //                 });
@@ -1398,7 +1398,7 @@ export default NearbyMechanics;
 
 //     const handleHire = async (mechanicId) => {
 //         try {
-//             const response = await axios.post('http://localhost:3004/mech/hire', {
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/mech/hire', {
 //                 mechanicId,
 //                 userId,
 //                 userLatitude: latitude,

@@ -24,7 +24,7 @@ const MechanicOrders = () => {
       }
 
       try {
-        const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+        const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
           headers: {
             'Content-Type': 'application/json',
             'x-auth-token': token,
@@ -41,7 +41,7 @@ const MechanicOrders = () => {
         const mechanicData = await mechanicResponse.json();
         const mechanicId = mechanicData._id;
 
-        const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+        const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
           headers: {
             'x-auth-token': token,
           },
@@ -63,7 +63,7 @@ const MechanicOrders = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `http://localhost:3004/mech/order/status`,
+        `https://final-project-2vgx.onrender.com/mech/order/status`,
         { orderId, status },
         {
           headers: {
@@ -216,7 +216,7 @@ export default MechanicOrders;
 //       }
 
 //       try {
-//         const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+//         const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -233,7 +233,7 @@ export default MechanicOrders;
 //         const mechanicData = await mechanicResponse.json();
 //         const mechanicId = mechanicData._id;
 
-//         const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+//         const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
 //           headers: {
 //             'x-auth-token': token,
 //           },
@@ -254,7 +254,7 @@ export default MechanicOrders;
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:3004/mech/order/status`,
+//         `https://final-project-2vgx.onrender.com/mech/order/status`,
 //         { orderId, status },
 //         {
 //           headers: {
@@ -400,7 +400,7 @@ export default MechanicOrders;
 //       }
 
 //       try {
-//         const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+//         const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -417,7 +417,7 @@ export default MechanicOrders;
 //         const mechanicData = await mechanicResponse.json();
 //         const mechanicId = mechanicData._id;
 
-//         const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+//         const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
 //           headers: {
 //             'x-auth-token': token,
 //           },
@@ -439,7 +439,7 @@ export default MechanicOrders;
 //       try {
 //         const token = localStorage.getItem('token');
 //         await axios.put(
-//           `http://localhost:3004/mech/order/status`,
+//           `https://final-project-2vgx.onrender.com/mech/order/status`,
 //           { orderId, status },
 //           {
 //             headers: {
@@ -565,7 +565,7 @@ export default MechanicOrders;
 //       }
 
 //       try {
-//         const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+//         const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -582,7 +582,7 @@ export default MechanicOrders;
 //         const mechanicData = await mechanicResponse.json();
 //         const mechanicId = mechanicData._id;
 
-//         const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+//         const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
 //           headers: {
 //             'x-auth-token': token,
 //           },
@@ -604,7 +604,7 @@ export default MechanicOrders;
 //       try {
 //         const token = localStorage.getItem('token');
 //         await axios.put(
-//           `http://localhost:3004/mech/order/status`,
+//           `https://final-project-2vgx.onrender.com/mech/order/status`,
 //           { orderId, status },
 //           {
 //             headers: {
@@ -738,7 +738,7 @@ export default MechanicOrders;
 //       }
 
 //       try {
-//         const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+//         const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -755,7 +755,7 @@ export default MechanicOrders;
 //         const mechanicData = await mechanicResponse.json();
 //         const mechanicId = mechanicData._id;
 
-//         const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+//         const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
 //           headers: {
 //             'x-auth-token': token,
 //           },
@@ -777,7 +777,7 @@ export default MechanicOrders;
 //       try {
 //         const token = localStorage.getItem('token');
 //         await axios.put(
-//           `http://localhost:3004/mech/order/status`,
+//           `https://final-project-2vgx.onrender.com/mech/order/status`,
 //           { orderId, status },
 //           {
 //             headers: {
@@ -902,7 +902,7 @@ export default MechanicOrders;
 //       }
 
 //       try {
-//         const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+//         const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -919,7 +919,7 @@ export default MechanicOrders;
 //         const mechanicData = await mechanicResponse.json();
 //         const mechanicId = mechanicData._id;
 
-//         const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+//         const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
 //           headers: {
 //             'x-auth-token': token,
 //           },
@@ -940,7 +940,7 @@ export default MechanicOrders;
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:3004/mech/order/status`,
+//         `https://final-project-2vgx.onrender.com/mech/order/status`,
 //         { orderId, status },
 //         {
 //           headers: {
@@ -1046,7 +1046,7 @@ export default MechanicOrders;
 //       }
 
 //       try {
-//         const mechanicResponse = await fetch("http://localhost:3004/mech/getmech", {
+//         const mechanicResponse = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -1063,7 +1063,7 @@ export default MechanicOrders;
 //         const mechanicData = await mechanicResponse.json();
 //         const mechanicId = mechanicData._id;
 
-//         const ordersResponse = await axios.get(`http://localhost:3004/mech/orders/mechanic/${mechanicId}`, {
+//         const ordersResponse = await axios.get(`https://final-project-2vgx.onrender.com/mech/orders/mechanic/${mechanicId}`, {
 //           headers: {
 //             'x-auth-token': token,
 //           },
@@ -1084,7 +1084,7 @@ export default MechanicOrders;
 //     try {
 //       const token = localStorage.getItem('token');
 //       await axios.put(
-//         `http://localhost:3004/mech/order/status`,
+//         `https://final-project-2vgx.onrender.com/mech/order/status`,
 //         { orderId, status },
 //         {
 //           headers: {

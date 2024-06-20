@@ -24,7 +24,7 @@ const Loginhome = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:3004/api/signup', { Name: name, Email: email, Password: password });
+            const response = await axios.post('https://final-project-2vgx.onrender.com/api/signup', { Name: name, Email: email, Password: password });
 
             if (response.status === 201) {
                 toast.success("Registration successful");
@@ -124,7 +124,7 @@ export default Loginhome;
 //         }
 
 //         try {
-//             const response = await axios.post('http://localhost:3004/api/signup', { Name: name, Email: email, Password: password });
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/api/signup', { Name: name, Email: email, Password: password });
 
 //             if (response.status === 201) {
 //                 toast.success("Registration successful");
@@ -219,7 +219,7 @@ export default Loginhome;
 //         }
 
 //         try {
-//             const response = await axios.post('http://localhost:3004/api/signup', { Name: name, Email: email, Password: password });
+//             const response = await axios.post('https://final-project-2vgx.onrender.com/api/signup', { Name: name, Email: email, Password: password });
 
 //             if (response.status === 201) {
 //                 setSuccess("Registration successful");
@@ -324,7 +324,7 @@ export default Loginhome;
 
 //     const handleSubmit = (e) => {
 //         e.preventDefault()
-//         axios.post('http://localhost:3004/User', { Name, Email, Password })
+//         axios.post('https://final-project-2vgx.onrender.com/User', { Name, Email, Password })
 //             .then(result => console.log(result))
 //             .catch(err => console.log(err))
 //     }

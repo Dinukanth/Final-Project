@@ -11,7 +11,7 @@ const AdminOrderDetails = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('http://localhost:3004/mech/Orders');
+                const response = await axios.get('https://final-project-2vgx.onrender.com/mech/Orders');
                 setOrders(response.data);
                 setLoading(false);
             } catch (error) {

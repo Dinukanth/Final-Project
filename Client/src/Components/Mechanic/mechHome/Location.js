@@ -8,7 +8,7 @@ const MechanicLocation = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3004/mech/get')
+    axios.get('https://final-project-2vgx.onrender.com/mech/get')
       .then(response => {
         setMechanics(response.data);
         setLoading(false);

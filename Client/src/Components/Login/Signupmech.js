@@ -56,7 +56,7 @@ const Signupmech = () => {
         const Mechdata = { Name, Email, Password, WhatkindofMechanic, Phonenumber, Address, GarageLocation };
 
         try {
-            const responseMech = await fetch("http://localhost:3004/api/signup", {
+            const responseMech = await fetch("https://final-project-2vgx.onrender.com/api/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -17,7 +17,7 @@ const MechanicLocations = () => {
     useEffect(() => {
         const fetchMechanics = async () => {
             try {
-                const response = await fetch("http://localhost:3004/mechanic/get");
+                const response = await fetch("https://final-project-2vgx.onrender.com/mechanic/get");
                 const data = await response.json();
                 setMechanics(data);
             } catch (error) {

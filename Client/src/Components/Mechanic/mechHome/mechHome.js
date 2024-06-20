@@ -18,7 +18,7 @@ const MechanicUserPage = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:3004/mech/getmech", {
+        const response = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
           headers: {
             'Content-Type': 'application/json',
             'x-auth-token': token,
@@ -153,7 +153,7 @@ export default MechanicUserPage;
 //       }
 
 //       try {
-//         const response = await fetch("http://localhost:3004/mech/getmech", {
+//         const response = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -276,7 +276,7 @@ export default MechanicUserPage;
 //       }
 
 //       try {
-//         const response = await fetch("http://localhost:3004/mech/getmech", {
+//         const response = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -391,7 +391,7 @@ export default MechanicUserPage;
 //       }
 
 //       try {
-//         const response = await fetch("http://localhost:3004/mech/getmech", {
+//         const response = await fetch("https://final-project-2vgx.onrender.com/mech/getmech", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,
@@ -513,7 +513,7 @@ export default MechanicUserPage;
 //       }
 
 //       try {
-//         const response = await fetch("http://localhost:3004/mech/get", {
+//         const response = await fetch("https://final-project-2vgx.onrender.com/mech/get", {
 //           headers: {
 //             'Content-Type': 'application/json',
 //             'x-auth-token': token,

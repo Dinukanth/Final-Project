@@ -50,7 +50,7 @@
 //       }
 
 //       try {
-//         const response = await axios.get('http://localhost:3004/mech/get', {
+//         const response = await axios.get('https://final-project-2vgx.onrender.com/mech/get', {
 //           headers: {
 //             'x-auth-token': token
 //           }

@@ -6,7 +6,7 @@ const UserLocation = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3004/form/getforms') 
+    axios.get('https://final-project-2vgx.onrender.com/form/getforms') 
       .then(response => {
         setUsers(response.data);
         setLoading(false);

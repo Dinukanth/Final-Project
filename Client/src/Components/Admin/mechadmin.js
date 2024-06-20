@@ -12,7 +12,7 @@ const Mechadmin = () => {
     const [mechanicToEdit, setMechanicToEdit] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3004/mech/get')
+        axios.get('https://final-project-2vgx.onrender.com/mech/get')
             .then(response => setMechanics(response.data))
             .catch(error => {
                 console.error('Error fetching users:', error);
@@ -35,7 +35,7 @@ const Mechadmin = () => {
     const confirmEdit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3004/mech/update/${mechanicToEdit._id}`, {
+            const response = await fetch(`https://final-project-2vgx.onrender.com/mech/update/${mechanicToEdit._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ const Mechadmin = () => {
         if (!mechanicToDelete) return;
 
         try {
-            const response = await fetch(`http://localhost:3004/mech/delete/${mechanicToDelete._id}`, {
+            const response = await fetch(`https://final-project-2vgx.onrender.com/mech/delete/${mechanicToDelete._id}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {

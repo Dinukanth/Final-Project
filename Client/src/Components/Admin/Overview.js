@@ -11,7 +11,7 @@ const Overview = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const userResponse = await axios.get('http://localhost:3004/user/get');
+                const userResponse = await axios.get('https://final-project-2vgx.onrender.com/user/get');
                 setUserCount(userResponse.data.length);
             } catch (error) {
                 console.error('Error fetching users:', error);
@@ -21,7 +21,7 @@ const Overview = () => {
 
         const fetchMechanics = async () => {
             try {
-                const mechanicResponse = await axios.get('http://localhost:3004/mech/get');
+                const mechanicResponse = await axios.get('https://final-project-2vgx.onrender.com/mech/get');
                 setMechanicCount(mechanicResponse.data.length);
             } catch (error) {
                 console.error('Error fetching mechanics:', error);

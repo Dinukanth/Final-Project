@@ -11,7 +11,7 @@ const Waiting = () => {
     useEffect(() => {
         const fetchLastOrder = async () => {
             try {
-                const response = await axios.get('http://localhost:3004/mech/Orders');
+                const response = await axios.get('https://final-project-2vgx.onrender.com/mech/Orders');
                 const orders = response.data;
                 if (orders.length > 0) {
                     setLastOrder(orders[orders.length - 1]);
@@ -114,7 +114,7 @@ export default Waiting;
 
 //         const fetchOrderStatus = async () => {
 //             try {
-//                 const response = await axios.get(`http://localhost:3004/order/status/${orderId}`);
+//                 const response = await axios.get(`https://final-project-2vgx.onrender.com/order/status/${orderId}`);
 //                 setOrderStatus(response.data.status);
 //                 setLoading(false);
 //             } catch (error) {
@@ -170,7 +170,7 @@ export default Waiting;
 
 //         const fetchOrderStatus = async () => {
 //             try {
-//                 const response = await axios.get(`http://localhost:3004/mech/order/status/${orderId}`);
+//                 const response = await axios.get(`https://final-project-2vgx.onrender.com/mech/order/status/${orderId}`);
 //                 setOrderStatus(response.data.status);
 //                 setLoading(false);
 //             } catch (error) {
@@ -222,7 +222,7 @@ export default Waiting;
 //     useEffect(() => {
 //         const fetchOrderStatus = async () => {
 //             try {
-//                 const response = await axios.get(`http://localhost:3004/mech/order/status/${orderId}`);
+//                 const response = await axios.get(`https://final-project-2vgx.onrender.com/mech/order/status/${orderId}`);
 //                 setOrderStatus(response.data.status);
 //                 setLoading(false);
 //             } catch (error) {
@@ -279,7 +279,7 @@ export default Waiting;
 //     useEffect(() => {
 //         const fetchOrder = async () => {
 //             try {
-//                 const response = await fetch(`http://localhost:3004/mech/order/${id}`); // Fetch the order by id
+//                 const response = await fetch(`https://final-project-2vgx.onrender.com/mech/order/${id}`); // Fetch the order by id
 
 //                 if (!response.ok) {
 //                     throw new Error('Network response was not ok');
