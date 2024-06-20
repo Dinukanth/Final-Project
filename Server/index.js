@@ -25,7 +25,7 @@ app.use('/form', formRouts);
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*",
+        origin: "https://gear-grease.vercel.app/",
         methods: ["GET", "POST"]
     }
 });
