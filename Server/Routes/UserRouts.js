@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const MechOrder = require('../Models/Order.model')
+const User = require('../Models/User.model')
+
 const  {createUser, updateUser, deleteUser, getUser, getUserById}=  require('../Controllers/UserController');
 
 // const {loginUser, signupUser } = require('../Controllers/authentication')
@@ -10,6 +13,35 @@ router.get('/get/:id', getUserById)
 router.post('/create',createUser);
 router.put('/update/:id',updateUser);
 router.delete('/delete/:id',deleteUser);
+
+
+
+router.post('/notify', async (req, res) => {
+    const { orderId, message } = req.body;
+
+    try {
+      // Here you can handle the notification logic, for example, sending a notification to a user
+      // For simplicity, let's assume you are updating a user document in the database with the message
+  
+      // Example logic to update user document with the notification message
+      const user = await User.findOneAndUpdate(
+        { orderId }, // Assuming orderId uniquely identifies a user
+        { notification: message }, // Update notification field in user document
+        { new: true } // To return the updated document
+      );
+  
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      // Optionally, you can respond with a success message or updated user data
+      res.status(200).json({ message: 'Notification sent successfully' });
+    } catch (error) {
+      console.error('Error sending notification:', error);
+      res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
 // router.post('/login',loginUser)
 // router.post('/signup',signupUser)
 module.exports = router;

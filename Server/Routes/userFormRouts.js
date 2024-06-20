@@ -1,13 +1,39 @@
 const express = require('express');
-const { createUserForm, getUserForms, findNearbyMechanics,  } = require('../Controllers/userFormController');
+const { createUserForm, getUserForms, findNearbyMechanics, updateOrderStatus } = require('../Controllers/userFormController'); // Add updateOrderStatus
 
 const router = express.Router();
 
 router.post('/createform', createUserForm);
 router.get('/getforms', getUserForms);
-router.post('/findnearbymechanics', findNearbyMechanics); 
+router.post('/findnearbymechanics', findNearbyMechanics);
+// router.put('/order/status', updateOrderStatus); // Add this route
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const express = require('express');
+// const { createUserForm, getUserForms, findNearbyMechanics,  } = require('../Controllers/userFormController');
+
+// const router = express.Router();
+
+// router.post('/createform', createUserForm);
+// router.get('/getforms', getUserForms);
+// router.post('/findnearbymechanics', findNearbyMechanics); 
+
+
+// module.exports = router;
 
 
 

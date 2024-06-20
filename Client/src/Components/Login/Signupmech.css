@@ -80,14 +80,13 @@
     cursor: pointer;
 }
 
-.submit-cointainer_mech{
+/* .submit-cointainer_mech{
     display: flex;
     gap: 30px;
-    /* margin-top: 60px auto; */
     margin-left: 50px;
     margin-top: 30px;
 
-}
+} */
 .submit_log-mech{
     display: flex;
     justify-content: center;
@@ -99,6 +98,7 @@
     border-radius: 50px;
     font-size: 19px;
     margin-left: 50px;
+    margin-top: 30px;
     
     
     font-weight: 700;

@@ -28,7 +28,10 @@ body{
 }
 
 .image-card{
-    height: 70%;
+    height: 300px;
+    width: auto;
+    margin-top: -20px;
+    margin-left: -20px;
 }
 
 .text_container{

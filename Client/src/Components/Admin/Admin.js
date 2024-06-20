@@ -39,11 +39,12 @@ export const Admin = () => {
                 <BiStats className='admin-icon'/>
                 Order
             </a>
-            {/*
-            <a href='#' className='item-admin'>
+          
+            {/* <Link to ='#' className='item-admin'>
                 <BiMessage className='admin-icon'/>
                 Message
-            </a>
+            </Link> */}
+              {/*
             <a href='#' className='item-admin'>
                 <BiHelpCircle className='admin-icon'/>
                 Help

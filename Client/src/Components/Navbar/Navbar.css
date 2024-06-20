@@ -11,8 +11,8 @@
 }
 
 .logo-nav {
-  height: 190px;
-  width: 250px;
+  height: 180px;
+  width: auto;
   margin-top: 10px;
   margin-left: 70px;
 }
@@ -25,9 +25,12 @@
 .home-nav-home,
 .nav-about,
 .nav-contact {
-  margin-left: 25px;
+  margin-left: 35px;
   color: #14274e;
   text-decoration: none;
+}
+.btn-{
+  margin-left: 20px;
 }
 
 .btn- .btn-nav {
@@ -37,14 +40,14 @@
   color: #fff;
   text-decoration: none;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100px;
   height: 40px;
 }
 
 .btn-nav:hover {
-  background: #4b7381;
-  color: black;
+  background: #1006a1;
+  color: rgb(250, 243, 243);
 }
 
 .navbar a {
@@ -58,7 +61,8 @@
 
 .navbar a:hover,
 .navbar a.active {
-  color: #0e0000;
+  color: #090b8d;
+  font-size: 20px;
 }
 
 .btn-menu {

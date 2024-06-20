@@ -49,6 +49,7 @@
     width: 480px;
     height: 80px;
     background: #eaeaea;
+    color: black;
     border-radius: 6px;
 }
 
@@ -59,7 +60,7 @@
     background: transparent;
     border: none;
     outline: none;
-    color: #797979;
+    color: #000000;
     font-size: 19px;
     margin: 0px 30px;
 

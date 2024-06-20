@@ -40,6 +40,12 @@ const mechanicSchema = new Mongoose.Schema({
         type: String,
         enum: ["user", "mechanic", "admin"],
         default: "mechanic"
+    },
+    accept: {
+        type: String,
+        enum: ['accept','pending','decline'],
+        default: "pending"
+
     }
 });
 

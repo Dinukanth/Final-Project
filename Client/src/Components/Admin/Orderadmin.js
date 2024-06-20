@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../Admin/Orderadmin.css';
+import { Admin } from './Admin';
 
 const AdminOrderDetails = () => {
     const [orders, setOrders] = useState([]);
@@ -10,7 +11,7 @@ const AdminOrderDetails = () => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('http://localhost:3004/mech/getAllOrders');
+                const response = await axios.get('http://localhost:3004/mech/Orders');
                 setOrders(response.data);
                 setLoading(false);
             } catch (error) {
@@ -18,7 +19,7 @@ const AdminOrderDetails = () => {
                 setError('Failed to fetch orders');
                 setLoading(false);
             }
-            };
+        };
 
         fetchOrders();
     }, []);
@@ -33,13 +34,14 @@ const AdminOrderDetails = () => {
 
     return (
         <div>
-            <h2>Order Details</h2>
+            <Admin/>
+            <div className='dinu-order'>
             <table>
                 <thead>
                     <tr>
                         <th>Order ID</th>
                         <th>Mechanic Name</th>
-                        <th>User Name</th>
+                        <th>Status</th>
                         <th>Created At</th>
                     </tr>
                 </thead>
@@ -48,12 +50,13 @@ const AdminOrderDetails = () => {
                         <tr key={order._id}>
                             <td>{order._id}</td>
                             <td>{order.mechanicName}</td>
-                            <td>{order.userId}</td>
+                            <td>{order.status}</td>
                             <td>{new Date(order.createdAt).toLocaleString()}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            </div>
         </div>
     );
 };

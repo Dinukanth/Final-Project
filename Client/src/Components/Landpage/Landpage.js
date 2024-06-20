@@ -101,7 +101,7 @@ function LandingPage() {
         <div className="background" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="white-overlay">
                 <div className="content">
-                    <h1>Mechanic will<br></br> come to your place<br></br><span style={{ color: 'silver', fontSize: '80px' }}> Very Fast</span></h1>
+                    <h1 className='para-land'>Mechanic will<br></br> come to your place<br></br><span style={{ color: 'silver', fontSize: '80px' }}> Very Fast</span></h1>
 
                     <div className="land_btn" >
                         <Link to="/userLogin" className="landpage-button2"><button id="button-land" > Repair here</button></Link>
