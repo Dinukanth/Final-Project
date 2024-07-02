@@ -22,23 +22,7 @@ export default function Navmech() {
 
     </div>
 
-//     <div>
 
-//     <div className="logo-logo-mech">
-//     {/* <img src={GG} alt=""  className="logo-nav"/> */}
-//     </div>
-
-//     <nav className="navbar-mech">
-//         <div className='align-mech'>
-//             <Link to="/" className="home-nav-mech">Home</Link>
-//             <Link to="/About" className="nav-about-mech" >Order</Link>
-//             <Link to="/Contact" className="nav-contact-mech" >Contact Us</Link>
-
-
-//         </div>
-        
-//     </nav>
-// </div>
    
   )
 }

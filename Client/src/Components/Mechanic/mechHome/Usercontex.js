@@ -6,11 +6,9 @@ export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // Simulate fetching user info on login (you would replace this with real logic)
   useEffect(() => {
     const fetchUser = async () => {
-      // Replace with actual API call to fetch logged-in user info
-      const loggedInUser = await fakeAuthApi(); // This should be replaced with your actual authentication logic
+      const loggedInUser = await fakeAuthApi(); 
       setUser(loggedInUser);
     };
 
@@ -24,7 +22,6 @@ export const UserProvider = ({ children }) => {
   );
 };
 
-// Simulated authentication function (replace with real authentication)
 const fakeAuthApi = () => {
   return new Promise(resolve => {
     setTimeout(() => {

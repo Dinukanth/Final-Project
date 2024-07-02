@@ -40,18 +40,9 @@ export const Admin = () => {
                 Order
             </a>
           
-            {/* <Link to ='#' className='item-admin'>
-                <BiMessage className='admin-icon'/>
-                Message
-            </Link> */}
-              {/*
-            <a href='#' className='item-admin'>
-                <BiHelpCircle className='admin-icon'/>
-                Help
-            </a> */}
+           
         </div>
     </div>
-    {/* <Overview/> */}
 
     </>
   )

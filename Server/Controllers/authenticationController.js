@@ -50,57 +50,6 @@ const loginUser = async (req, res) => {
 
 
 
-// const signupUser = async (req, res) => {
-//     try {
-//         const { Name, Email, Password, WhatkindofMechanic, Phonenumber, Address, GarageLocation } = req.body;
-
-//         console.log('Received payload:', req.body);
-
-      
-//         const existingUser = await User.findOne({ Email });
-//         const existingMechanic = await Mechanic.findOne({ Email });
-
-//         if (existingUser) {
-//             return res.status(400).json({ message: "User already exists with this email" });
-//         }
-
-//         if (existingMechanic) {
-//             return res.status(400).json({ message: "Mechanic already exists with this email" });
-//         }
-
-//         const hashPassword = await bcrypt.hash(Password, 10);
-
-//         if (WhatkindofMechanic) {
-//             const newMechanic = new Mechanic({
-//                 Name,
-//                 Email,
-//                 Password: hashPassword,
-//                 WhatkindofMechanic,
-//                 Phonenumber,
-//                 Address,
-//                 latitude: GarageLocation.latitude,
-//                 longitude: GarageLocation.longitude
-//             });
-
-//             await newMechanic.save();
-//             const token = jwt.sign({ userId: newMechanic._id, role: "mechanic" }, process.env.JWT_SECRET, { expiresIn: '1h' });
-//             return res.status(201).json({ message: 'Mechanic created successfully', token });
-//         } else {
-//             const newUser = new User({
-//                 Name,
-//                 Email,
-//                 Password: hashPassword
-//             });
-
-//             await newUser.save();
-//             const token = jwt.sign({ userId: newUser._id, role: "user" }, process.env.JWT_SECRET, { expiresIn: '1h' });
-//             return res.status(201).json({ message: 'User signed up successfully', token });
-//         }
-//     } catch (error) {
-//         console.error('Error signing up:', error);
-//         return res.status(500).json({ message: 'Something went wrong', error: error.message });
-//     }
-// };
 
 const signupUser = async (req, res) => {
     try {
