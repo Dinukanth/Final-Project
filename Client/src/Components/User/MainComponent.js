@@ -11,12 +11,9 @@ const MainComponent = () => {
 
     const handleUpdate = (orderId, status) => {
         if (status === 'Hired') {
-            // Update the state to show the map
             setShowMap(true);
-            // Fetch the updated nearby mechanics based on the hired mechanic
-            // setNearbyMechanics(updatedMechanics);
+            
         } else if (status === 'Come' || status === 'Decline') {
-            // Update the status in the orders array
             setOrders(prevOrders =>
                 prevOrders.map(order =>
                     order._id === orderId ? { ...order, status } : order

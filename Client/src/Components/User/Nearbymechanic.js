@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import '../User/Nearbymechanic.css';
 import MechanicMap from '../User/Mechanicmap';
 
-const socket = io('https://final-project-2vgx.onrender.com'); // Adjust the URL as needed
-
+const socket = io('https://final-project-2vgx.onrender.com'); 
 const NearbyMechanics = ({ latitude, longitude }) => {
     const navigate = useNavigate();
     const [nearbyMechanics, setNearbyMechanics] = useState([]);
@@ -51,7 +50,6 @@ const NearbyMechanics = ({ latitude, longitude }) => {
                 setShowPopup(true);
                 setShowMap(false);
 
-                // Print order details to console
                 console.log('Order details:', {
                     mechanic,
                     orderId: response.data.orderId,
@@ -59,7 +57,6 @@ const NearbyMechanics = ({ latitude, longitude }) => {
                     userLongitude: longitude,
                 });
 
-                // Navigate to waiting page with the order ID
                 setTimeout(() => {
                     navigate(`/waiting`);
                 }, 2000);

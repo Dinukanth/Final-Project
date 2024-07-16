@@ -1,7 +1,6 @@
 import React from 'react'
 import { BiHome, BiMessage, BiStats, BiTask, BiHelpCircle, BiSolidCarMechanic, BiUser, BiSolidCarGarage, BiSolidReceipt} from 'react-icons/bi'
 import '../Admin/Admin.css'
-// BiSolidReport,
 import Navbar from '../Navbar/Navbar'
 import { HashLink as Link } from "react-router-hash-link";
 import Overview from './Overview';
@@ -11,7 +10,6 @@ export const Admin = () => {
   return (
 
     <>
-    {/* <Navbar/> */}
 
 
     <div className='menu-admin'>

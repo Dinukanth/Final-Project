@@ -8,13 +8,11 @@
     font-family: Arial, sans-serif;
 }
 
-/* Error message styling */
 .error-message {
     color: red;
     margin-bottom: 10px;
 }
 
-/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -126,15 +124,3 @@ button:hover {
     border-radius: 3px;
     box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-/* .dinu-user{
-    margin-top: -850px;
-    margin-left: 280px;
-} */

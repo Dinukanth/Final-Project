@@ -1,16 +1,3 @@
-// import React from "react";
-// import '../Contact/Contact.css'
-
-// function Contact() {
-
-//     return(
-//         <div>
-            
-//         </div>
-//     )
-    
-// }
-
 import React from 'react';
 import '../Contact/Contact.css'
 import Navbar from '../Navbar/Navbar';
@@ -18,7 +5,6 @@ import Footerhome from '../Footerhome/footerhome';
 function Contact() {
     return (
         <>
-        {/* <Navbar/> */}
         <div className='con-con-contact'>
 
         <section className="contact" id='contact-contact-home'>

@@ -7,7 +7,6 @@ const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const items = [
         { image: 'https://i.ibb.co/qCkd9jS/img1.jpg', name: 'Switzerland', description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!' },
-        // Add more items here
     ];
 
     const next = () => {
