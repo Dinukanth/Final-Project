@@ -152,37 +152,6 @@ const hireUser = async (req, res) => {
 };
 
 
-
-
-// const hireUser = async (req, res) => {
-//     const { mechanicId, userId, serviceDetails, userformId, userLatitude, userLongitude } = req.body;
-
-//     try {
-//         const mechanic = await Mechanic.findById(mechanicId);
-//         if (!mechanic) {
-//             return res.status(404).json({ message: 'Mechanic not found' });
-//         }
-
-//         const newOrder = new MechOrder({
-//             mechanicId,
-//             userId,
-//             serviceDetails,
-//             userformId,
-//             userLatitude,
-//             userLongitude,
-//             status: 'Pending',
-//             createdAt: new Date()
-//         });
-
-//         const savedOrder = await newOrder.save();
-
-//         res.status(200).json({ message: 'Mechanic hired successfully', order: savedOrder });
-//     } catch (error) {
-//         console.error('Error hiring mechanic:', error);
-//         res.status(500).json({ message: 'Something went wrong', error: error.message });
-//     }
-// };
-
 const updateOrderStatus = async (req, res) => {
     try {
         const { orderId, status } = req.body;
@@ -197,43 +166,6 @@ const updateOrderStatus = async (req, res) => {
         res.status(500).json({ message: 'Error updating order status', error });
     }
 };
-
-
-
-
-
-
-// const updateOrderStatus = async (req, res) => {
-//     try {
-//         const { orderId, status } = req.body;
-//         const updatedOrder = await MechOrder.findByIdAndUpdate(orderId, { status }, { new: true });
-
-//         if (!updatedOrder) {
-//             return res.status(404).json({ message: 'Order not found' });
-//         }
-
-//         res.status(200).json(updatedOrder);
-//     } catch (error) {
-//         console.error('Error updating order status:', error);
-//         res.status(500).json({ message: 'Error updating order status', error });
-//     }
-// };
-
-// const getOrderStatus = async (req, res) => {
-//     try {
-//         const { id } = req.params;
-//         const order = await MechOrder.findById(id);
-
-//         if (!order) {
-//             return res.status(404).json({ message: 'Order not found' });
-//         }
-
-//         res.status(200).json({ status: order.status });
-//     } catch (error) {
-//         console.error('Error fetching order status:', error);
-//         res.status(500).json({ message: 'Error fetching order status', error });
-//     }
-// };
 
 
 
