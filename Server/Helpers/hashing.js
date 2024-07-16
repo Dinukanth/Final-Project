@@ -18,9 +18,6 @@ const hashValidator = async (plainPassword,hashedPassword)=>{
         return false;
 
     }
-
-
-    
     
 }
 

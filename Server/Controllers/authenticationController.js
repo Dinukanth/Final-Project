@@ -3,11 +3,6 @@ const User = require('../Models/User.model');
 const Mechanic = require('../Models/Mechanics.model');
 const bcrypt = require('bcrypt');
 
-
-
-
-
-
 const loginUser = async (req, res) => {
     try {
         const { Email, Password } = req.body;
@@ -41,15 +36,6 @@ const loginUser = async (req, res) => {
         res.status(500).json({ message: "Something went wrong" });
     }
 };
-
-
-
-
-
-
-
-
-
 
 const signupUser = async (req, res) => {
     try {
@@ -123,23 +109,4 @@ const auth = (req, res, next) => {
 };
 
 module.exports = { loginUser, signupUser, auth };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

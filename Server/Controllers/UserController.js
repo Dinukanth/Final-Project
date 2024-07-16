@@ -90,23 +90,3 @@ const getUserById = async (req, res) => {
 };
 
 module.exports = { getUser, createUser, updateUser, deleteUser, getUserById };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

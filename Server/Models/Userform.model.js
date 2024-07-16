@@ -38,29 +38,3 @@ module.exports = UserForm;
 
 
 
-
-
-
-
-// const Mongoose =require("mongoose");
-// const Userform = new Mongoose.Schema({
-   
-//     Name:{
-//         type: String,
-//         require:true
-//     },
-//     YourVehicle:{
-//         type: String,
-//         require:true
-//     },
-//     VehicleIssue :{
-//         type: String,
-//         require:true
-//     },
-//     Livelocation :{
-//         type:String,
-//     }
-// })
-
-// const reviewModel = Mongoose.model('Form', Userform)
-// module.exports = reviewModel
