@@ -39,7 +39,7 @@ const AdminOrderDetails = () => {
             <table>
                 <thead>
                     <tr>
-                        <th></th>
+                        <th>Order Id</th>
                         <th>Mechanic Name</th>
                         <th>Status</th>
                         <th>Created At</th>
